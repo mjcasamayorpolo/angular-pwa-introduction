@@ -1,0 +1,23 @@
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 50px;
+}
+
+.selected {
+    background-color: gray;
+    color: white;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+app-grid {
+    display: flex;
+    justify-content: center;
+}

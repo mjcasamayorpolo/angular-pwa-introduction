@@ -1,0 +1,11 @@
+<div *ngIf="images && images.length != 0">
+  <div class="example-button-row buttons">
+    <button mat-stroked-button [ngClass]="{'selected': viewGrid}" (click)="onViewGrid()"><mat-icon>reorder</mat-icon></button>
+    <button mat-stroked-button [ngClass]="{'selected': !viewGrid}" (click)="onViewCards()"><mat-icon>apps</mat-icon></button>
+  </div>
+  <app-grid *ngIf="viewGrid" [images]="images"></app-grid>
+  <app-card *ngIf="!viewGrid" [images]="images"></app-card>
+</div>
+<div class="center" *ngIf="!images || images.length == 0">
+  <mat-spinner></mat-spinner>
+</div>

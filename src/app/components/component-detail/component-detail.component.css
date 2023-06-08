@@ -1,0 +1,7 @@
+.row{
+    justify-content: center;
+}
+
+.row > div {
+    text-align: center;
+}

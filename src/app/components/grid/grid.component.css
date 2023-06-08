@@ -1,0 +1,7 @@
+table {
+    width: 80%;
+}
+
+tr.mat-row {
+    cursor: pointer;
+}
