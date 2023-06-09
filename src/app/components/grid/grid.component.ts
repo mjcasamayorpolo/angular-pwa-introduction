@@ -7,7 +7,7 @@ import {
 } from '@angular/animations';
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Image } from 'src/app/models/image.interface';
+import { Product } from 'src/app/models/product.interface';
 
 @Component({
   selector: 'app-grid',
@@ -21,7 +21,7 @@ import { Image } from 'src/app/models/image.interface';
   ],
 })
 export class GridComponent implements OnInit {
-  @Input() images!: Image[];
+  @Input() products!: Product[];
 
   displayedColumns: string[] = ['id', 'author'];
 

@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Image } from '../models/image.interface';
+import { Product } from '../models/product.interface';
 
 @Injectable({
   providedIn: 'root',
@@ -9,11 +9,11 @@ import { Image } from '../models/image.interface';
 export class ComponentService {
   constructor(private http: HttpClient) {}
 
-  getAllImages(): Observable<Image[]> {
-    return this.http.get<Image[]>('https://fakestoreapi.com/products');
+  getAllProducts(): Observable<Product[]> {
+    return this.http.get<Product[]>('https://fakestoreapi.com/products');
   }
 
-  getImageById(id: any): Observable<Image> {
-    return this.http.get<Image>('https://fakestoreapi.com/products/' + id);
+  getProductById(id: any): Observable<Product> {
+    return this.http.get<Product>('https://fakestoreapi.com/products/' + id);
   }
 }

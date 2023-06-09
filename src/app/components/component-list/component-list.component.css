@@ -2,6 +2,12 @@
     display: flex;
     justify-content: flex-end;
     margin-bottom: 50px;
+    padding-top: 50px;
+    padding-right: 50px;
+}
+
+.buttons button {
+    margin: 5px;
 }
 
 .selected {

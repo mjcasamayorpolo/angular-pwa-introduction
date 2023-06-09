@@ -1,11 +1,8 @@
 <div class="container mt-5">
-    <div *ngIf="image" class="row animate__animated animate__bounce animate__fadeIn">
+    <div *ngIf="product" class="row animate__animated animate__bounce animate__fadeIn">
         <div class="col-md-4">
-            <!-- <p><strong>Identifier:</strong>{{image.id}}</p> -->
-            <p><strong>Title: </strong>{{image.title}}</p>
-            <!-- <p><strong>Rate:</strong>{{image.rating.rate}}</p>
-            <p><strong>Url:</strong>{{image.image}}</p> -->
-            <div><img style="width: 80%; height: 80%" class="rounded" src="{{image.image}}" alt=""></div>
+            <p><strong>Title: </strong>{{product.title}}</p>
+            <div><img style="width: 80%; height: 80%" class="rounded" src="{{product.image}}" alt=""></div>
             <br>
             <br>
             <mat-accordion>
@@ -17,19 +14,19 @@
                 </mat-expansion-panel-header>
                 <p>
                   <strong>Title:</strong>
-                   {{image.title}}
+                   {{product.title}}
                 </p>
                 <p>
                   <strong>Price:</strong>
-                   {{image.price}}
+                   {{product.price}}
                 </p>
                 <p>
                   <strong>Description:</strong>
-                   {{image.description}}
+                   {{product.description}}
                 </p>
                 <p>
                   <strong>Category:</strong>
-                   {{image.category}}
+                   {{product.category}}
                 </p>
               </mat-expansion-panel>              
             </mat-accordion>

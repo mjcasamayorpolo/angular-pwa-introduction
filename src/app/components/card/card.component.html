@@ -1,16 +1,16 @@
 <div class="cardList">
-    <mat-card class="example-card" *ngFor="let image of images" [@fadeInOut] (click)="router.navigate(['/image', image.id])">
+    <mat-card class="example-card" *ngFor="let product of products" [@fadeInOut] (click)="router.navigate(['/product', product.id])">
       <mat-card-header>
-          <mat-card-title>Id: {{ image.id }}</mat-card-title>
-          <mat-card-subtitle>Title: {{ image.title }}</mat-card-subtitle>
+          <mat-card-title>Id: {{ product.id }}</mat-card-title>
+          <mat-card-subtitle>Title: {{ product.title }}</mat-card-subtitle>
       </mat-card-header>
-      <img mat-card-image src="{{image.image}}" alt="{{ image.title }}">
+      <img mat-card-image src="{{product.image}}" alt="{{ product.title }}">
       <mat-card-content>
           <p>
-            Description: {{ image.description }}
+            Description: {{ product.description }}
           </p>
           <p>
-            Rate: {{ image.rating.rate }}
+            Rate: {{ product.rating.rate }}
           </p>
       </mat-card-content>
     </mat-card>

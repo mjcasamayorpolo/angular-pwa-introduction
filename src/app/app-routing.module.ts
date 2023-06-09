@@ -5,7 +5,7 @@ import { ComponentListComponent } from './components/component-list/component-li
 
 const routes: Routes = [
   { path: '', component: ComponentListComponent },
-  { path: 'image/:id', component: ComponentDetailComponent },
+  { path: 'product/:id', component: ComponentDetailComponent },
   { path: '**', component: ComponentListComponent },
 ];
 

@@ -1,7 +1,12 @@
 table {
     width: 80%;
+    margin-bottom: 50px;
 }
 
 tr.mat-row {
     cursor: pointer;
+}
+
+th {
+    font-weight: bold;
 }

@@ -7,7 +7,7 @@ import {
 } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Image } from 'src/app/models/image.interface';
+import { Product } from 'src/app/models/product.interface';
 import { ComponentService } from 'src/app/services/component.service';
 
 @Component({
@@ -22,18 +22,21 @@ import { ComponentService } from 'src/app/services/component.service';
   ],
 })
 export class ComponentListComponent implements OnInit {
-  images: Image[] = [];
+  products: Product[] = [];
   viewGrid: boolean;
 
-  constructor(public router: Router, private imagesService: ComponentService) {
+  constructor(
+    public router: Router,
+    private productsService: ComponentService
+  ) {
     this.viewGrid = true;
   }
 
   ngOnInit(): void {
     setTimeout(
       () =>
-        this.imagesService.getAllImages().subscribe((images) => {
-          this.images = images;
+        this.productsService.getAllProducts().subscribe((products) => {
+          this.products = products;
         }),
       2000
     );
